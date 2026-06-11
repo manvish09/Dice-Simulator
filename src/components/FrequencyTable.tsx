@@ -13,9 +13,11 @@ export default function FrequencyTable({ rolls }: Props) {
       <table
         border={1}
         style={{
-          width: "100%",
-          borderCollapse: "collapse",
-        }}
+  width: "min(80%, 700px)",
+  margin: "0 auto",
+  borderCollapse: "collapse",
+  textAlign: "center"
+}}
       >
         <thead>
           <tr>

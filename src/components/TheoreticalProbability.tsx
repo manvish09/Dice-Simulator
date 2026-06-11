@@ -15,6 +15,7 @@ function TheoreticalProbabilityTable({
   style={{
     width: "100%",
     borderCollapse: "collapse",
+    textAlign: "center"
   }}
 >
       <thead>

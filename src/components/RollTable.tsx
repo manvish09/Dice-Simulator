@@ -12,11 +12,14 @@ export default function RollTable({ rolls }: Props) {
     border: "1px solid #ccc",
   }}
 >
-      <table border={1}
+ <table
+  border={1}
   style={{
-   width: "100%",
-minWidth: "300px",
+    width: "80%",
+    minWidth: "300px",
+    margin: "0 auto",
     borderCollapse: "collapse",
+    textAlign: "center"
   }}
 >
         <thead>

@@ -26,6 +26,7 @@ export default function ProbabilityTable({ rolls }: Props) {
     <div style={{
   width: "100%",
   borderCollapse: "collapse",
+  textAlign: "center"
 }}>
     <table border={1}>
       <thead>
