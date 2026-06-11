@@ -29,7 +29,7 @@ function FrequencyBarChart({
   return (
     <ResponsiveContainer
       width="100%"
-      height={500}
+      height={window.innerWidth < 768 ? 300 : 500}
     >
       <BarChart data={data}>
         <CartesianGrid

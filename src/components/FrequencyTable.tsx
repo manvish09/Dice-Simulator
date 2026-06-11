@@ -9,28 +9,30 @@ export default function FrequencyTable({ rolls }: Props) {
   }));
 
   return (
-    <table border={1} 
-  style={{
-    width: "80%",
-    margin: "0 auto",
-    borderCollapse: "collapse",
-  }}
->
-      <thead>
-        <tr>
-          <th>Face</th>
-          <th>Frequency</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        {frequencies.map((item) => (
-          <tr key={item.face}>
-            <td>{item.face}</td>
-            <td>{item.count}</td>
+    <div style={{ overflowX: "auto" }}>
+      <table
+        border={1}
+        style={{
+          width: "100%",
+          borderCollapse: "collapse",
+        }}
+      >
+        <thead>
+          <tr>
+            <th>Face</th>
+            <th>Frequency</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody>
+          {frequencies.map((item) => (
+            <tr key={item.face}>
+              <td>{item.face}</td>
+              <td>{item.count}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }

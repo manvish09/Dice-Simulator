@@ -4,17 +4,18 @@ type Props = {
 
 export default function RollTable({ rolls }: Props) {
   return (
-    <div
-      style={{
-        maxHeight: "300px",
-        overflowY: "auto",
-        border: "1px solid #ccc",
-      }}
-    >
+   <div
+  style={{
+    maxHeight: "300px",
+    overflowY: "auto",
+    overflowX: "auto",
+    border: "1px solid #ccc",
+  }}
+>
       <table border={1}
   style={{
-    width: "80%",
-    margin: "0 auto",
+   width: "100%",
+minWidth: "300px",
     borderCollapse: "collapse",
   }}
 >

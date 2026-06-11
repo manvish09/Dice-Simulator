@@ -10,10 +10,10 @@ function TheoreticalProbabilityTable({
   const total = rolls.length;
 
   return (
+    <div style={{ overflowX: "auto" }}>
     <table border={1} cellPadding={8}
   style={{
-    width: "80%",
-    margin: "0 auto",
+    width: "100%",
     borderCollapse: "collapse",
   }}
 >
@@ -51,6 +51,7 @@ function TheoreticalProbabilityTable({
         })}
       </tbody>
     </table>
+    </div>
   );
 }
 

@@ -23,6 +23,10 @@ export default function ProbabilityTable({ rolls }: Props) {
   });
 
   return (
+    <div style={{
+  width: "100%",
+  borderCollapse: "collapse",
+}}>
     <table border={1}>
       <thead>
         <tr>
@@ -44,5 +48,6 @@ export default function ProbabilityTable({ rolls }: Props) {
         ))}
       </tbody>
     </table>
+    </div>
   );
 }

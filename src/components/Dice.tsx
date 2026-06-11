@@ -5,8 +5,8 @@ type DiceProps = {
 };
 
 const dotStyle: React.CSSProperties = {
-  width: "18px",
-  height: "18px",
+  width: "clamp(10px,1.8vw,18px)",
+height: "clamp(10px,1.8vw,18px)",
   borderRadius: "50%",
   background:
     "radial-gradient(circle at 30% 30%, #444, #111)",
@@ -49,15 +49,15 @@ export default function Dice({
     >
       <div
         style={{
-          width: "150px",
-          height: "150px",
+         width: "min(150px, 35vw)",
+height: "min(150px, 35vw)",
           display: "grid",
           gridTemplateColumns:
             "repeat(3, 1fr)",
           gridTemplateRows:
             "repeat(3, 1fr)",
           gap: "10px",
-          padding: "18px",
+          padding: "clamp(10px,2vw,18px)",
           borderRadius: "24px",
 
           background:

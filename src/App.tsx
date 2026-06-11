@@ -49,11 +49,12 @@ function App() {
     outline: "none",
   };
 
-  const gridStyle = {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: "24px",
-  };
+const gridStyle = {
+  display: "grid",
+  gridTemplateColumns:
+    "repeat(auto-fit, minmax(320px, 1fr))",
+  gap: "24px",
+};
 
   const currentRoll =
     rolls.length > 0 ? rolls[rolls.length - 1] : 1;
@@ -100,11 +101,11 @@ function App() {
   };
 
   return (
-    <div
-      style={{
-        maxWidth: "1400px",
-        margin: "0 auto",
-        padding: "40px",
+ <div
+  style={{
+    maxWidth: "1400px",
+    margin: "0 auto",
+    padding: "clamp(16px,4vw,40px)",
         fontFamily: "'Inter', Arial, sans-serif",
         background:
           "linear-gradient(135deg,#dbeafe 0%,#eff6ff 40%,#f8fafc 100%)",
@@ -114,7 +115,7 @@ function App() {
       <h1
         style={{
           textAlign: "center",
-          fontSize: "48px",
+          fontSize: "clamp(2rem, 5vw, 3rem)",
           fontWeight: 800,
           color: "#1D4ED8",
           marginBottom: "30px",
@@ -129,7 +130,7 @@ function App() {
         style={{
           display: "grid",
           gridTemplateColumns:
-            "repeat(auto-fit,minmax(250px,1fr))",
+            "repeat(auto-fit,minmax(220px,1fr))",
           gap: "15px",
           marginBottom: "24px",
         }}
@@ -214,12 +215,16 @@ function App() {
         >
           🎲 Roll Once
         </button>
-
-        <div
-          style={{
-            marginTop: "20px",
-          }}
-        >
+<div
+  style={{
+    marginTop: "20px",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "12px",
+    alignItems: "center",
+  }}
+>
           <label
             style={{
               fontWeight: 600,
@@ -242,7 +247,7 @@ function App() {
             onClick={handleSimulation}
             style={{
               ...buttonStyle,
-              marginLeft: "10px",
+              marginLeft: 0,
             }}
           >
             ▶ Run Simulation
@@ -254,7 +259,7 @@ function App() {
               ...buttonStyle,
               background:
                 "linear-gradient(135deg,#F87171,#DC2626)",
-              marginLeft: "10px",
+              marginLeft: 0,
             }}
           >
             ↺ Reset
