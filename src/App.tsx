@@ -16,7 +16,7 @@ function App() {
     background: "rgba(255,255,255,0.9)",
     backdropFilter: "blur(12px)",
     borderRadius: "20px",
-    padding: "24px",
+    padding: "clamp(14px,3vw,24px)",
     boxShadow: "0 12px 32px rgba(37,99,235,0.10)",
     border: "1px solid rgba(255,255,255,0.6)",
   };
@@ -100,16 +100,16 @@ const gridStyle = {
     setRolls([]);
   };
 
-  return (
- <div
+  return (<div
   style={{
-    maxWidth: "1400px",
-    margin: "0 auto",
-    padding: "clamp(16px,4vw,40px)",
-        fontFamily: "'Inter', Arial, sans-serif",
+    width: "100%",
+    minHeight: "100vh",
+    boxSizing: "border-box",
+    padding: "clamp(12px,3vw,32px)",
+    fontFamily: "'Inter', Arial, sans-serif",
         background:
           "linear-gradient(135deg,#dbeafe 0%,#eff6ff 40%,#f8fafc 100%)",
-        minHeight: "100vh",
+        // minHeight: "100vh",
       }}
     >
       <h1
@@ -130,7 +130,7 @@ const gridStyle = {
         style={{
           display: "grid",
           gridTemplateColumns:
-            "repeat(auto-fit,minmax(220px,1fr))",
+            "repeat(auto-fit,minmax(180px,1fr))",
           gap: "15px",
           marginBottom: "24px",
         }}
@@ -203,7 +203,7 @@ const gridStyle = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: "35px",
+    marginBottom: "20px",
   }}
 >
   <Dice value={currentRoll} />
@@ -225,12 +225,16 @@ const gridStyle = {
     alignItems: "center",
   }}
 >
-          <label
-            style={{
-              fontWeight: 600,
-              color: "#334155",
-            }}
-          >
+        <label
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "8px",
+    alignItems: "center",
+    fontWeight: 600,
+    color: "#334155",
+  }}
+>
             Number of Rolls:
             <input
               type="number"

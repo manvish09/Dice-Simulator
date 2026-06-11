@@ -49,16 +49,16 @@ export default function Dice({
     >
       <div
         style={{
-         width: "min(150px, 35vw)",
-height: "min(150px, 35vw)",
+         width: "clamp(90px, 30vw, 150px)",
+height: "clamp(90px, 30vw, 150px)",
           display: "grid",
           gridTemplateColumns:
             "repeat(3, 1fr)",
           gridTemplateRows:
             "repeat(3, 1fr)",
-          gap: "10px",
+          gap: "clamp(4px, 1vw, 10px)",
           padding: "clamp(10px,2vw,18px)",
-          borderRadius: "24px",
+          borderRadius: "clamp(12px, 3vw, 24px)",
 
           background:
             "linear-gradient(145deg,#ffffff,#e2e8f0)",
